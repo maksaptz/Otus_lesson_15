@@ -36,5 +36,5 @@
 ##### II
    1) Запускаем task_2/Vagrantfile
    2) Подключаемся к машине и меняем пользователя: ```su user``` ### password = user
-   3) И проверяем возмоднсоти пользователя: ```sudo systemctl restart docker.service``` ```docker ps```
+   3) И проверяем возможности пользователя: ```sudo systemctl restart docker.service``` ```docker ps```
    4) Как мы видим команды успешно выполняются.
