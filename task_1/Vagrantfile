@@ -1,0 +1,17 @@
+# -*- mode: ruby -*-
+# vim: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "debian/bullseye64"
+  config.vm.box_version = "11.20230615.1"
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 256
+    v.cpus = 1
+  end
+
+  config.vm.define "pam" do |pam|
+    pam.vm.hostname = "pam"
+    pam.vm.network "private_network", ip: "192.168.50.11", virtualbox__intnet: "net1"
+    pam.vm.provision "shell", path: "script.sh"
+  end
+end
